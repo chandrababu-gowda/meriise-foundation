@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* font-family: 'Nunito Sans', sans-serif; */
+/* font-family: 'Roboto Slab', serif; */
+
+:root {
+  --black: #1c1c1e;
+  --dark-gray: #1c1c1ea2;
+  --cream-white: #fcfcfc;
+  --white: #ffffff;
+  --blue: #0a84ff;
+  --light-gray: #f2f2f7;
+  --border-radius: 0.5rem;
+  --bor-1: 2px solid red;
+  --bor-2: 2px solid green;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 23px;
+  letter-spacing: 0.35px;
+}
+
+body {
+  background-color: var(--cream-white);
+}
+
+.heading {
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  width: min(100%, 1300px);
+  margin: 0 auto;
+}
+
+/********** Navbar section **********/
+
+.section__navbar--bg {
+  background-color: var(--black);
+  position: sticky;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0rem;
+}
+
+.navbar__logo img {
+  width: 125px;
+}
+
+.navbar__links {
+  margin-left: -5rem;
+}
+
+.navbar__links__link {
+  padding: 0rem 1.5rem;
+}
+
+.navbar__links__link img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navbar__user img {
+  width: 2rem;
+  height: 2rem;
+}
+
+/********** Home section **********/
+
+.section__home {
+  /* border: var(--bor-1); */
+  display: flex;
+  gap: 2rem;
+}
+
+.section__home > * {
+  /* border: var(--bor-2); */
+  height: 500px;
+}
+
+.home__news-section,
+.home__other-sectors {
+  width: 25%;
+}
+.home__feed-section {
+  width: 60%;
+}
+
+/***** News section *****/
+
+.news-section__news {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0 1rem -1.6rem;
+}
+
+.news--number {
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.news--content {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/***** Feed section *****/
+
+.feed__post {
+  background-color: var(--white);
+  /* width: 100%; */
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  margin: 2.5rem;
+  /* border: var(--bor-1); */
+  box-shadow: 1px 3px 30px 2px #1c1c1e12;
+}
+
+.post__person-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.person-details__image {
+  width: 3rem;
+  height: 3rem;
+  border: var(--bor-2);
+  border-radius: var(--border-radius);
+}
+
+.person-detail__name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.person-detail__position {
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+}
+
+.post__image {
+  border: var(--bor-1);
+  width: 100%;
+  height: 300px;
+  border-radius: var(--border-radius);
+  margin-top: 0.5rem;
+}
+
+.post__reactions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+  /* border: var(--bor-2); */
+}
+
+.post__reaction {
+  border: var(--bor-1);
+  border-radius: var(--border-radius);
+  width: 2rem;
+  height: 2rem;
+}
+
+/***** Other sector section *****/
+.other-sector__sector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.sector--image {
+  border: var(--bor-1);
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--border-radius);
+}
+
+.sector--name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/******************** News page [cards] ********************/
+
+.news-page__heading-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-page__cards-section {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 2.5rem;
+}
+
+.news-cards {
+  /* border: var(--bor-1); */
+  border-radius: var(--border-radius);
+  box-shadow: 1px 3px 30px 2px #1c1c1e12;
+  width: 100%;
+  padding: 3rem 2.5rem;
+  background-color: var(--white);
+}
+
+.news-card__image {
+  width: 100%;
+  height: 210px;
+  border: var(--bor-2);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.news-card__heading {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5rem;
+  line-height: normal;
+  letter-spacing: normal;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.news-card__button {
+  margin-top: 1rem;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  background-color: var(--blue);
+  color: var(--cream-white);
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+/******************** News page [Individual] ********************/
+
+.container__news-page__individual {
+  width: min(100%, 800px);
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.news-indi__heading {
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.news-indi__img {
+  width: 100%;
+  height: 500px;
+  border: var(--bor-1);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.news-indi__content {
+  font-size: 1.25rem;
+  line-height: 28px;
+  margin-bottom: 1rem;
+}
+
+/******************** Login/Signup page ********************/
+
+.section__login-signup {
+  width: 400px;
+  background-color: var(--white);
+  box-shadow: 1px 3px 30px 2px #1c1c1e12;
+  padding: 1rem 1.5rem;
+  margin: 6rem auto;
+  border-radius: var(--border-radius);
+}
+
+.section__login-signup p {
+  text-align: center;
+  margin: 1rem;
+}
+
+.login-signup__selectors {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.login-signup__selector {
+  background-color: #ffffff00;
+  font-size: 1.15rem;
+  font-weight: 600;
+  /* border: none; */
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  border: none;
+}
+
+.login-signup__inputs {
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+  border-radius: var(--border-radius);
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  /* gap: 1rem; */
+  margin: 0.5rem 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.login-signup__apps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.login-signup__app {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+  padding: 0.3rem;
+}
+
+.login-signup__submit-btn {
+  background-color: var(--blue);
+  color: var(--cream-white);
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  padding: 0.5rem 2rem;
+  border: none;
+  /* text-align: center; */
+  display: block;
+  margin: 2rem auto;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
+}
